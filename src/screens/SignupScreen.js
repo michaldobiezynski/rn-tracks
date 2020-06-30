@@ -14,7 +14,7 @@ const SignupScreen = () => {
         headerText="Sign up for Tracker"
         errorMessage={state.errorMessage}
         submitButtonText="Sign Up"
-        onSubmit={({ email, password }) => signup({ email, password })}
+        onSubmit={signup}
       />
       <NavLink
         text="Already have an account? Sign in instead."
