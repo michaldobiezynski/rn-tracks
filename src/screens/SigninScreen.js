@@ -10,21 +10,19 @@ const SigninScreen = () => {
   const { state, signin, clearErrorMessage } = useContext(Context);
 
   return (
-    <>
-      <View style={styles.container}>
-        <NavigationEvents onWillBlur={clearErrorMessage} />
-        <AuthForm
-          headerText="Sign In to Your Account"
-          errorMessage={state.errorMessage}
-          onSubmit={signin}
-          submitButtonText="Sign In"
-        />
-        <NavLink
-          text="Dont have an account? Sign up instead."
-          routeName="Signup"
-        />
-      </View>
-    </>
+    <View style={styles.container}>
+      <NavigationEvents onWillBlur={clearErrorMessage} />
+      <AuthForm
+        headerText="Sign In to Your Account"
+        errorMessage={state.errorMessage}
+        onSubmit={signin}
+        submitButtonText="Sign In"
+      />
+      <NavLink
+        text="Dont have an account? Sign up instead."
+        routeName="Signup"
+      />
+    </View>
   );
 };
 
